@@ -3,11 +3,30 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  sum = 0
+  arr.each {|element| sum += element }
+  sum
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  # The sum of the 2 largest values
+  sum = 0
+  length = arr.length
+  arrSort = arr.sort
+
+  if length == 0 
+    sum = 0
+  elsif length == 1
+    sum = arr[0]
+  else
+    arr.sort
+    max1 = arrSort[length - 1]
+    max2 = arrSort[length - 2]
+
+    sum = max1 + max2
+  end
+
+  sum
 end
 
 def sum_to_n? arr, n
